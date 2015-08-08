@@ -1,0 +1,54 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">导航菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="main">
+        <span class="glyphicon glyphicon-home"></span> Door 
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse"  collapse="isCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="active"><a ng-href="#">内容</a></li>
+        <li><a ng-href="#">关于</a></li>
+
+        <li class="btn-group" dropdown>
+          <a class="btn dropdown-toggle btn-navbar" dropdown-toggle>
+             事例
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+
+            <li ng-repeat="dir in dirs"><a ui-sref="demo({path: dir})">{{dir}}</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- start: User Dropdown -->
+        <li class="btn-group" dropdown ng-if="$root.global.isLogin">
+          <a class="btn dropdown-toggle btn-navbar" dropdown-toggle>
+            <i class="halflings-icon white user"></i> {{$root.global.user.login}}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="halflings-icon user"></i> 我的信息</a></li>
+            <li><a href="login.html"><i class="halflings-icon off"></i> 退出</a></li>
+          </ul>
+        </li>
+
+        <!-- end: User Dropdown -->
+        <li ng-if="!$root.global.isLogin"><a ui-sref="login">登录/注册</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
