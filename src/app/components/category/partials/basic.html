@@ -1,0 +1,15 @@
+<div>
+  <div class="form-group  has-feedback">
+    <label for="name">名称</label>
+    <input class="form-control" id="name" name="category[name]" type="text" required ng-model='currentCategory.name' />
+    <span class="glyphicon glyphicon-ok form-control-feedback"
+          ng-show="myForm.name.$dirty && myForm.name.$valid"></span>
+    <label for="name">描述</label>
+    <textarea class="form-control" id="description" name="category[description]" type="textarea" required ng-model='currentCategory.description' />
+    <span class="glyphicon glyphicon-ok form-control-feedback"
+          ng-show="myForm.name.$dirty && myForm.name.$valid"></span>
+
+  </div>
+</div>
+
+

@@ -1,7 +1,7 @@
 angular.module "door"
   .directive 'acmeNavbar', ->
 
-    NavbarController = ($scope, moment) ->
+    NavbarController = ($scope, ngDialog) ->
       $scope.dirs = [
         "accordion", "carousel", "dropdown", "popover", "tabs", "typeahead",
         "alert", "collapse", "modal", "progressbar", "timepicker", "buttons",
@@ -10,7 +10,14 @@ angular.module "door"
       $scope.isCollapsed = true
       vm = this
       # "vm.creation" is avaible by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow()
+      #vm.relativeDate = moment(vm.creationDate).fromNow()
+
+      $scope.openCategotyNav = ->
+        ngDialog.open
+          template: 'app/components/category/index.html'
+          scope: $scope
+          controller: 'CategoryController'
+          className: 'ngdialog-theme-category'
       return
 
     directive =
