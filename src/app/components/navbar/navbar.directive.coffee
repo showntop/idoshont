@@ -12,12 +12,13 @@ angular.module "door"
       # "vm.creation" is avaible by directive option "bindToController: true"
       #vm.relativeDate = moment(vm.creationDate).fromNow()
 
-      $scope.openCategotyNav = ->
+      $scope.newTopic = ->
         ngDialog.open
-          template: 'app/components/category/index.html'
+          template: 'app/components/topic/topic.new.html'
           scope: $scope
-          controller: 'CategoryController'
-          className: 'ngdialog-theme-category'
+          overlay: false
+          controller: 'TopicController'
+          className: 'ngdialog-theme-topic'
       return
 
     directive =

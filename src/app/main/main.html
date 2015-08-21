@@ -1,26 +1,7 @@
-<div class="container">
-  <div class="role role1">
-    <div class="category-board">      
-      <div ng-repeat="item in role1Categories" class="category-item">
-        <category-item category="item"/>
-      </div>
-    </div>
-
-<!--     <img src="/assets/images/role1.png"> -->
-  
- </div>
-
-
-  <!-- <div class="fill"></div> -->
-
-
-  <div class="role role2">
-    <div class="category-board" >  
-      <div ng-repeat="item in role2Categories" class="category-item">
-        <category-item category="item"/>
-      </div>
-    </div>
-    <!--     <img src="/assets/images/role2.jpg">
-    -->  
+<div>
+  <!-- 话题列表 不同展示方式 -->
+  <div ng-repeat="i in [10,11,12,13,14]">
+    <topic-profile/>
   </div>
+
 </div>

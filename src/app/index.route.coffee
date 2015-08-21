@@ -19,6 +19,10 @@ angular.module "door"
         url: "/categorynav"
         templateUrl: 'app/components/category/nav.html'
         controller: "CategoryController"
+      .state "topic",
+        url: "/topic"
+        templateUrl: "app/components/topic/topic.new.html"
+        controller: "TopicController"
 
 #     .state "category.list",
 #        url: ''

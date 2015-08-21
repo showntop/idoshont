@@ -1,0 +1,28 @@
+#topic-profile{
+  background: #EEEEE0;
+  width: 300px;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+
+  #user-bar{
+    height: 30px;
+    line-height: 30px;
+    #follow-btn{
+      float: right;
+    }
+    margin-bottom: 10px;
+  }
+
+  #key-content{
+    clip:rect(0px,60px,200px,0px); 
+  }
+
+}
+

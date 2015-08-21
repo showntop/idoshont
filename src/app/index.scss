@@ -32,8 +32,26 @@ body {
 // }
 
 .container{
-  margin-top: 52px;
+  margin-top: 60px;
 }
+
+.fa-picture-custom{
+  overflow: hidden;
+  input{
+    position: absolute;
+    top: 0;
+    left: -85px;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    width: 500%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
