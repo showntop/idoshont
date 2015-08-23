@@ -15,6 +15,9 @@ angular.module "door"
       $scope.newTopic = ->
         ngDialog.open
           template: 'app/components/topic/topic.new.html'
+          appendTo: '#main-container'
+          closeByDocument: false
+          name: 'newTopic'
           scope: $scope
           overlay: false
           controller: 'TopicController'

@@ -18,22 +18,29 @@ angular.module "door"
       taTools.insertLink.display = '<div><i class="fa fa-link"/></div>'
       #taTools.unlink.display = '<div></div>'
       taTools.insertImage = 
-        display: '<div style=""><i class="fa fa-picture-o" style="position: relative; left: 6px;"/><form id="xxx" method="post" action="/api/topic_attachments.json" style="position: relative; left: -20px; display: inline; width: 100%; height: 100%;"><input name="topic_attachment[attachment]" id="file-input" type="file"></form></div>'
-        # display: '<div><i class="fa fa-picture-o"/></div>'
-        action: ->
-          console.log 'fdfdsf'
-          $('#file-input').bind "change", (changeEvent) ->
-            console.log 'change'
-            if(changeEvent.target.files.length > 0)
-              file = changeEvent.target.files[0]
-              xxx.submit( (data)->
-                imageLink = data.src
-                if(imageLink && imageLink != '' && imageLink != 'http://')
-                  return this.$editor().wrapSelection('insertImage', imageLink, true)
-              )
-              #topicService.upload(file)
-            else
-              return
+        # display: '<div style=""><i class="fa fa-picture-o" style="position: relative; left: 6px;"/><form id="xxx" method="post" action="/api/topic_attachments.json" style="position: relative; left: -20px; display: inline; width: 100%; height: 100%;"><input name="topic_attachment[attachment]" id="file-input" type="file" style="display: inline;"></form></div>'
+        display: '<div><i class="fa fa-picture-o"/></div>'
+        action: ($deferred)->
+          # imageLink = $window.prompt(taTranslations.insertImage.dialogPrompt, 'http://')
+          # if imageLink and imageLink != '' and imageLink != 'http://'
+          #   return this.$editor().wrapSelection('insertImage', imageLink, true);
+          # else
+          console.log 'xxxx'
+          this.$editor().$parent.launch('insertImage', $deferred.resolve, this.$editor())
+
+          # console.log 'fdfdsf'
+          # $('#file-input').bind "change", (changeEvent) ->
+          #   console.log 'change'
+          #   if(changeEvent.target.files.length > 0)
+          #     file = changeEvent.target.files[0]
+          #     xxx.submit( (data)->
+          #       imageLink = data.src
+          #       if(imageLink && imageLink != '' && imageLink != 'http://')
+          #         return this.$editor().wrapSelection('insertImage', imageLink, true)
+          #     )
+          #     #topicService.upload(file)
+          #   else
+          #     return
         
       # there is no quote icon in old font-awesome so we change to text as follows
       #delete taTools.quote.display

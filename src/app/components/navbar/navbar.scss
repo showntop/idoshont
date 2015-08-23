@@ -15,3 +15,15 @@
 .acme-navbar-text{
   color: white;
 }
+
+.container-fluid{
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar-nav > li > a {
+  //padding-top: 5px;
+  padding-bottom: 5px;
+  height: 100%;
+  line-height: 100%;
+}

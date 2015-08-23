@@ -17,5 +17,5 @@ angular.module "door"
       templateUrl: 'app/components/topic/topic.profile.html'
       scope: topic: '='
       controller: ProfileController
-      controllerAs: 'vm'
-      bindToController: true
+      link: (scope, element, attrs) ->
+        element.innerHtml = $scope.cooked
