@@ -3,6 +3,7 @@ angular.module "door"
 
     ProfileController = ($scope) ->
       console.log 'me'
+
     directive =
       restrict: 'AE'
       templateUrl: 'app/components/topic/topic.profile.html'

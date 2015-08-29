@@ -24,7 +24,6 @@ angular.module('door')
 
       return deferred.promise
 
-
     topicService.update = (topic) ->
       promise = $http
         method: 'put',
