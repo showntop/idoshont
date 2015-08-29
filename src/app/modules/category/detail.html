@@ -1,0 +1,24 @@
+<div class="ngdialog-header">
+  <h3>类别：{{currentCategory.name}}</h3>
+</div>
+
+<form ng-submit="saveCategory()" class="form-horizontal" novalidate>
+
+  <div class="ngdialog-body">
+
+      <tabset class="ngdialog-bar">
+        <tab ng-repeat="tab in tabs" heading="{{tab.name}}" active="tab.active" disable="tab.disabled">
+          <div ng-include="tab.src"></div>
+        </tab>
+      </tabset>
+
+      <hr/>
+
+      <div class="ngdialog-footer">
+        <button type="button" class="button" ng-click="closeThisDialog('Cancel')">取消</button>
+        <button type="submit" class="button-primary">提交</button>
+      </div>
+  </div>
+
+</form>
+

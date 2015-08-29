@@ -1,0 +1,60 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
+        <span class="sr-only">导航菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="main">
+        <span class="glyphicon glyphicon-home"></span> Door 
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse"  collapse="isCollapsed">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="" ng-click="newTopic()">
+            <span>
+               <svg class="compose-button" width="45px" height="32px" viewBox="0 0 45 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(-1056.000000, -11.000000)"><path d="M1056,13.0017433 C1056,11.896211 1056.89889,11 1057.99166,11 L1099.00834,11 C1100.1083,11 1101,11.8892617 1101,13.0017433 L1101,40.9982567 C1101,42.103789 1100.10111,43 1099.00834,43 L1057.99166,43 C1056.8917,43 1056,42.1107383 1056,40.9982567 L1056,13.0017433 Z M1069.60453,31.5129333 L1069.60307,31.5129333 L1069.6016,31.5144 L1068,37.9838667 L1074.46947,36.3822667 L1074.47093,36.3822667 L1074.47093,36.3808 L1085.1292,25.7225333 L1080.26133,20.8561333 L1069.60453,31.5129333 Z M1085.11747,16 L1081.91427,19.2032 L1086.78213,24.0710667 L1089.98533,20.8664 L1085.11747,16 Z M1081.0768,24.1708 L1072.95,32.2976 L1072.14773,31.4953333 L1080.27453,23.37 L1081.0768,24.1708 Z" id="Compose-button"></path></g></svg>
+            </span>
+          </a>
+        </li>
+        <li><a ng-href="#">关于</a></li>
+        <li><a ui-sref="category">类别</a> </li>
+        <li class="btn-group" dropdown>
+          <a class="btn dropdown-toggle btn-navbar" dropdown-toggle>
+             事例
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+
+            <li ng-repeat="dir in dirs"><a ui-sref="demo({path: dir})">{{dir}}</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- start: User Dropdown -->
+        <li class="btn-group" dropdown ng-if="$root.global.isLogin">
+          <a class="btn dropdown-toggle btn-navbar" dropdown-toggle>
+            <i class="halflings-icon white user"></i> {{$root.global.user.login}}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="halflings-icon user"></i> 我的信息</a></li>
+            <li><a href="login.html"><i class="halflings-icon off"></i> 退出</a></li>
+          </ul>
+        </li>
+
+        <!-- end: User Dropdown -->
+        <li ng-if="!$root.global.isLogin"><a ui-sref="login">登录/注册</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

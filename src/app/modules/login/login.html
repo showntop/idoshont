@@ -1,0 +1,44 @@
+<div class="container-fluid-full">
+		<div class="row-fluid">
+
+			<div class="row-fluid">
+			<div class="login-box">
+				<div class="icons">
+					<a ui-sref="main"><i class="halflings-icon home"></i></a>
+					<a ui-sref="main"><i class="halflings-icon cog"></i></a>
+				</div>
+				<h2>登录账户</h2>
+				<form class="form-horizontal" ng-submit="login()"  name="login_form"
+         novalidate ng-controller="LoginController">
+					<fieldset>
+						
+						<div class="input-prepend" title="Username">
+							<span class="add-on"><i class="halflings-icon user"></i></span>
+							<input class="input-large span10" name="username" id="username" type="text" placeholder="输入用户名/邮箱" ng-model="user.login"/>
+						</div>
+						<div class="clearfix"></div>
+
+						<div class="input-prepend" title="Password">
+							<span class="add-on"><i class="halflings-icon lock"></i></span>
+							<input class="input-large span10" name="password" id="password" type="password" placeholder="输入密码" ng-model="user.password"/>
+						</div>
+						<div class="clearfix"></div>
+						
+						<label class="remember" for="remember"><input type="checkbox" id="remember" />记住我</label>
+
+						<div class="button-login">	
+							<input type="submit" class="btn btn-primary" value="登录" />
+						</div>
+						<div class="clearfix"></div>
+					</fieldset>
+				</form>
+				<hr>
+				<h3>忘记密码?</h3>
+				<p>
+					没问题, <a href="#">点这里</a> 获取新密码.
+				</p>	
+			</div>
+		</div><!--/row-->
+	</div>
+
+</div>

@@ -1,0 +1,17 @@
+<div id="topic-new-container">
+  <div id="top-btn-group">
+    <button>隐藏</button>
+    <button>预览</button>
+  </div>
+  <input id="topic-title" name="title" type="text" ng-model="topic.title"/>
+  <text-angular ng-model="topic.cooked">
+      <p>Any <b>HTML</b> we put in-between the text-angular tags gets <a href="automatic">automatically</a> put into the editor if there <strong style="font-size: 12pt;"><u><em>is not</em></u></strong> a ngModel</p>
+  </text-angular>
+<!--   <div id="summernote"></div>
+ -->  
+  <div id="bottom-btn-group">
+    <button ng-click="save()">保存</button>
+    <button ng-click="publish()">发布</button>
+    <button ng-click="cancel()">取消</button>
+  </div>
+</div>

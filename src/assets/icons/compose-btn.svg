@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="compose-button"
+   width="45"
+   height="25"
+   viewBox="0 0 45 32"
+   version="1.1"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="compose-btn.svg">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1280"
+     inkscape:window-height="751"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="6.8888889"
+     inkscape:cx="10.451613"
+     inkscape:cy="16"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     transform="translate(-1056,-11)"
+     id="g4">
+    <path
+       d="M 1056,13.001743 C 1056,11.896211 1056.8989,11 1057.9917,11 l 41.0166,0 c 1.1,0 1.9917,0.889262 1.9917,2.001743 l 0,27.996514 C 1101,42.103789 1100.1011,43 1099.0083,43 l -41.0166,0 c -1.1,0 -1.9917,-0.889262 -1.9917,-2.001743 l 0,-27.996514 z m 13.6045,18.51119 -0,0 -0,0.0015 -1.6016,6.469467 6.4695,-1.6016 0,0 0,-0.0015 10.6583,-10.658267 -4.8679,-4.8664 -10.6568,10.6568 z M 1085.1175,16 l -3.2032,3.2032 4.8678,4.867867 3.2032,-3.204667 L 1085.1175,16 Z m -4.0407,8.1708 -8.1268,8.1268 -0.8023,-0.802267 8.1268,-8.125333 0.8023,0.8008 z"
+       id="Compose-button"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

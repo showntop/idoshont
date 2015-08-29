@@ -1,0 +1,29 @@
+.navbar{
+  background: url(/assets/images/bg-navbar.jpg);
+  border: none;
+}
+
+.navbar-nav > li > a {
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+  background-color: transparent;
+}
+
+.acme-navbar-text{
+  color: white;
+}
+
+.container-fluid{
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar-nav > li > a {
+  //padding-top: 5px;
+  padding-bottom: 5px;
+  height: 100%;
+  line-height: 100%;
+}
