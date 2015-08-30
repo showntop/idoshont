@@ -2,6 +2,9 @@ angular.module "door"
   .directive 'topicProfile', ->
 
     ProfileController = ($scope) ->
+      $scope.userInfoVisiable = false
+      $scope.toggleUserInfo = ->
+        $scope.userInfoVisiable = !$scope.userInfoVisiable
       console.log 'me'
 
     directive =
@@ -11,4 +14,4 @@ angular.module "door"
       controller: ProfileController
       link: (scope, element, attrs) ->
         console.log 'xxxxx'
-        element[0].children[0].children[1].innerHTML = scope.topic.cooked
+        element[0].children[0].children[1].children[0].innerHTML = scope.topic.cooked

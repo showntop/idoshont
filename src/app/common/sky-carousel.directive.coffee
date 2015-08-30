@@ -2,7 +2,13 @@ angular.module "door"
   .directive 'skyCarousel', ->
 
     SkyCarouselController = ($scope) ->
-
+      console.log 'controller'
+      $('#sky-carousel').carousel(
+        itemWidth: 300
+        itemHeight: 450
+        distance: 15
+        selectedItemDistance: 50
+      )
       return
 
     directive =
@@ -11,14 +17,6 @@ angular.module "door"
       scope: items: '='
       controller: SkyCarouselController
       compile: (element, attrs) ->
-        console.log 'xxxxx'
-        console.log 'xxxxxx'
+        console.log 'compile'
       link: (scope, element, attrs) -> 
-            console.log scope
-            $('#sky-carousel').carousel(
-              itemWidth: 300
-              itemHeight: 450
-              distance: 15
-              selectedItemDistance: 50
-            )
-      transclude: true
+        console.log 'link'

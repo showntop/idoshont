@@ -1,6 +1,18 @@
-<div id="main-container">
+<div class="container">
   <!-- 话题列表 不同展示方式 -->
-  <div ng-repeat="topic in topTopics">
-    <topic-profile topic="topic"/>
+  <div class="col-lg-9 col-md-12 col-sm-12">
+    <div ng-repeat="topic in topTopics">
+      <topic-profile topic="topic"/>
+    </div>    
+  </div>
+  <div class="col-lg-3 visible-lg">
+    <ul class="list-group">
+      <a class="list-group-item on" href="http://www.jq22.com/jquery-plugins背景-1-jq1" data-para="time"><i class="fa fa-flag"></i> &nbsp;最新发布</a>
+      <a class="list-group-item" href="http://www.jq22.com/jquery-plugins背景-1-jq4" data-para="comments"><i class="fa fa-heart"></i> &nbsp;最多收藏</a>
+      <a class="list-group-item" href="http://www.jq22.com/jquery-plugins背景-1-jq2" data-para="comments"><i class="fa fa-comments-o"></i> &nbsp;最多评论</a>
+      <a class="list-group-item" href="http://www.jq22.com/jquery-plugins背景-1-jq3" data-para="downloads"><i class="fa fa-arrow-circle-o-down"></i> &nbsp;最多下载</a>
+      <a class="list-group-item" href="http://www.jq22.com/jquery-plugins背景-1-jq8" data-para="ie8"><i class="fa fa-bus"></i> &nbsp;兼容IE8</a>
+      <a class="list-group-item" href="http://www.jq22.com/jquery-plugins背景-1-jq6" data-para="ie6"><i class="fa fa-motorcycle"></i> &nbsp;兼容IE6</a> 
+    </ul>
   </div>
 </div>

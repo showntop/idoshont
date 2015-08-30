@@ -1,14 +1,91 @@
 <div class="topic-profile">
-  <div class="user-bar">
-    <a>
+  <div class="header-wrapper">
+
+    <a class="title">{{topic.title || '该文章没有标题吧啦啦啦啦啦啦啦啦啦啦啦啦啦啦了'}}</a>
+    <a class="avatar" ng-click="toggleUserInfo()">
       <img src="https://31.media.tumblr.com/avatar_594e564c0581_30.png"/>
     </a>
-    <a>{{topic.title}}</a>
-    <a class="follow-btn">+关注</a>
   </div>
-  <div class="key-content">
+
+  <div class="content-wrapper arrow">
+    <div class="key-content">xxxxxxx</div>
+    <div class="extra">
+      <span class="cell">
+          <a class="gray">chide</a>
+      </span>
+      <span class="cell">
+        <a class="gray like" href="javascript:void(0);" ng-click="toggleLike(tweet)">
+            <i class="heart icon empty">
+            </i>
+            <span>1</span>
+        </a>
+      </span>
+      <span class="cell">
+        <a class="gray like" href="javascript:void(0);" ng-click="toggleLike(tweet)">
+            <i class="heart icon empty">
+            </i>
+            <span>1</span>
+        </a>
+      </span>
+      <span class="cell">
+        <a class="gray like" href="javascript:void(0);" ng-click="toggleLike(tweet)">
+            <i class="heart icon empty">
+            </i>
+            <span>1</span>
+        </a>
+      </span>
+      <span class="cell">
+        <a class="gray like" href="javascript:void(0);" ng-click="toggleLike(tweet)">
+            <i class="heart icon empty">
+            </i>
+            <span>1</span>
+        </a>
+      </span>
+    </div>
   </div>
-  <div class="btn-group">
-    收藏、评论、、、、
-  </div>
+  <form class="topic-profile-form">
+    <div class="ui large icon input">
+        <input type="text" placeholder="在此输入评论内容（Command+Enter）" ng-model="content" cg-ctrl-enter="doComment();" cg-at-context="" at-context-type="'tweet_comment'" at-item="tweet" has_no_monkey="true" cg-placeholder="" cg-at-emoji="">
+        <i class="right icon" ng-click="doComment();"></i>
+    </div>
+  </form>
+</div>
+
+<div class="about-me" ng-hide="userInfoVisiable">
+  <div class="user-bg" child-num="20"><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl><dl></dl></div>
+  
+  <div class="show">
+    <div class="me">
+      <a href="s"><img src="http://www.jq22.com/demo/personhtml-150506224723/images/me.png"/></a>
+    </div>
+
+    <div class="basic-info"> 
+      <strong class="name">慕浟佳</strong>，网络爱好者
+      <p>其实我</p>
+      <p>屁都不会</p>
+    </div>
+
+    <div class="clear"></div>
+
+      
+
+      <div class="introduction">
+
+          <p>这个网站是我的个人主页，里面都为原创内容。</p>
+
+          <p>我经常会分享一些好资源</p>
+
+          <p>欢迎和我一起讨论编程技术。 
+
+              <a class="qq" target="_blank" href="http://www.jq22.com" title="网站源码">QQ</a>
+
+              <a class="weibo tencent" target="_blank" href="http://www.jq22.com" title="js特效">JS特效</a>
+
+          </p>
+
+          <p>在我不是特别忙的时候，也接受修改代码付费编程任务。</p>
+
+      </div>
+
+  </div><!-- .show-->
 </div>
