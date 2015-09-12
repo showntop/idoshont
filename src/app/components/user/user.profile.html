@@ -1,11 +1,22 @@
-<sky-carousel items="slides"/>
+<!-- <sky-carousel items="slides"/> -->
 <!-- 
 <sky-carousel>
   <div ng-repeat="slide in slides">
     <sky-carousel-item title="zzzz" img-src="{{slide.image}}" description="{{slide.text}}"/>
   </div>
 </sky-carousel>
+ -->
 
+<carousel interval="myInterval" no-wrap="noWrapSlides">
+  <slide ng-repeat="slide in slides" active="slide.active">
+    <img ng-src="{{slide.image}}" style="margin:auto;">
+    <div class="carousel-caption">
+      <h4>Slide {{$index}}</h4>
+      <p>{{slide.text}}</p>
+    </div>
+  </slide>
+</carousel>
+<!-- 
 <div class="sixteen columns">
       <div class="project">
         <div class="sky-carousel sc-no-select" style="visibility: visible;">
@@ -183,4 +194,5 @@
           </div>
         <div class="sc-preloader" style="display: none;"></div><div class="sc-content-wrapper"><div class="sc-content-container" style="visibility: visible; opacity: 1;"><div class="sc-content"><h2>Adam Rose</h2><p>Graphic Designer</p></div></div></div><canvas class="sc-overlay sc-overlay-left" width="190" height="1" style="width: 190px;"></canvas><canvas class="sc-overlay sc-overlay-right" width="190" height="1" style="width: 190px;"></canvas><a href="#" class="sc-nav-button sc-prev sc-no-select"></a><a href="#" class="sc-nav-button sc-next sc-no-select"></a></div>
       </div>
-    </div> -->
+    </div>
+ -->

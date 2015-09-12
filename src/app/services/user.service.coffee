@@ -2,7 +2,7 @@ angular.module('door')
   .factory('userService',['$http', '$q', ($http, $q) ->
 
     userService =
-      user: {}
+      user: {}      
 
     userService.login = (login, password) ->
       deferred = $q.defer()
@@ -19,19 +19,31 @@ angular.module('door')
         deferred.resolve(result)
       promise.error (result,status,headers,config) ->
         deferred.reject(result)
-
       return deferred.promise
 
+    userService.registe = (user) ->
+      deferred = $q.defer()
+      promise = $http
+        method: 'post',
+        url: '/api/users/signup.json'
+        data: {user: user}
+      promise.success (result, status, headers, config) ->
+        console.log '注册成功'
+        console.log result
+        this.user = result.user
+        deferred.resolve result
+      promise.error (result, status, headers, config) ->
+        deferred.reject(result)
+      return deferred.promise
 
-
-    userService.update = (topic) ->
+    userService.update = (userPorfile) ->
       promise = $http
         method: 'put',
-        url: '/api/topics/' + topic.id + '.json',
+        url: '/api/users.json',
         headers: {
-          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+          'token': $('').attr('content')
         }
-        data: {topic: topic}
+        data: {user_profile: userPorfile}
       promise.success (result,status,headers,config) ->
         console.log result
         if result.code == -1

@@ -1,0 +1,85 @@
+.topic-item{
+  width: 280px;
+  padding: 8px;
+  margin: 0 6px 10px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  border:solid 1px #BCBCBC;
+  box-shadow: 0 0 10px #BCBCBC;
+
+  .header-wrapper{
+    height: 40px;
+    .avatar{
+      height: 100%;
+      line-height: 100%;
+      float: right;
+    }
+    .title{
+      font-size: 1.5em;
+      height: 40px;
+      line-height: 40px;
+      max-width: 200px;
+      overflow: hidden;
+      float: left;
+      font-weight: bold;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+    }
+  }
+
+  .content-wrapper{
+
+  }
+
+  .content-img{
+    display: block;
+    position: relative;
+    img{
+      width: 100%;
+      display: block;
+      min-height: 250px;
+    }
+  }
+
+  .description{
+    padding: 5px 0;
+    overflow: hidden;
+    line-height: 22px;
+    color: #898686;
+    font-size: 1.3em;
+    text-indent: 10px;
+    background: #fff;
+    border-bottom: solid 1px #DBDBDB;
+  }
+
+  .footer-wrapper{
+    background: #fff;
+  }
+  .footer-wrapper .sp1{
+    float: left;
+    height: 30px;
+    line-height: 36px;
+    color: #898686;
+  }
+  .footer-wrapper .sp1 b{
+    color: #5DAA21;
+    font-weight: bold;
+    padding: 0 5px 0;
+    font-size: 1.3em;
+  }
+  .footer-wrapper .sp2{
+    float: right;
+    height: 30px;
+    padding: 0 5px;
+    line-height: 36px;
+    color: #898686;
+  }
+  .footer-wrapper .sp3{
+    float: right;
+    height: 30px;
+    line-height: 36px;
+    color: #898686;
+  }
+
+}

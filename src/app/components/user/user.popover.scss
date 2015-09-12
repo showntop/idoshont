@@ -1,0 +1,48 @@
+.popover-content{
+  padding: 0 0 0 0;
+}
+
+.popover{
+  max-width: 405px;
+}
+
+.about-me{
+  width: 401px;
+  height: 201px;
+  background: #d5d5d5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  .avatar{
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+
+  .show{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .basic-info{
+    float: left;
+    width: 180px;
+    padding: 0 9px;
+  }
+
+  dl {
+    float: left;
+    width: 39px;
+    height: 39px;
+    margin: 1px 0 0 1px;
+    background: #fafafa;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}

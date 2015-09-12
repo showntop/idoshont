@@ -1,6 +1,88 @@
 angular.module "door"
   .controller "UserController", ($rootScope, $scope, userService, $state) ->
 
+    # $('#login-body').ripples({
+    #   resolution: 512,
+    #   dropRadius: 20, #px
+    #   perturbance: 0.04
+    # })
+    $scope.slides = [
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      },
+
+      {
+        image: '/assets/images/identity1.png',
+        text: 'xxxxx'
+      }
+    ]
     $scope.user = {}
 
     $scope.login = ->

@@ -8,6 +8,11 @@ angular.module "door"
       {name: '情怀', background: '/assets/images/clouds1.png'}
     ]
 
+    $scope.dynamicPopover =
+      content: 'Hello, World!'
+      templateUrl: 'app/components/user/user.login.html'
+      title: 'Title'
+
     $scope.role2Categories = [
       {name: '吐槽', background: '/assets/images/note1.svg'},
       {name: '段子', background: '/assets/images/note2.svg'},
@@ -26,5 +31,8 @@ angular.module "door"
       # 处理错误 .reject
       $scope.user = error: '用户不存在！'
       return
+
+    $scope.$on 'overed-user', (e, d) ->
+      console.log d
 
     return

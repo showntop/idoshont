@@ -6,14 +6,18 @@ angular.module "door"
         templateUrl: "app/main/main.html"
         controller: "MainController"
         controllerAs: "main"
-      .state "login",
-        url: "/login"
-        templateUrl: "app/components/user/user.login.html"
-        controller: "UserController"
+      .state "auth",
+        url: "/auth"
+        templateUrl: "app/components/user/auth.html"
+        controller: "UserAuthCtrl"
       .state "profile",
         url: "/profile"
-        templateUrl: "app/components/user/user.profile.html"
-        controller: "UserController"
+        templateUrl: "app/components/user/profile.html"
+        controller: "UserProfileCtrl"
+      .state "identity",
+        url: "/identity"
+        templateUrl: "app/components/user/identity.html"
+        controller: "UserIdentityCtrl"
       .state "category",
         #abstract: true
         url: "/category"

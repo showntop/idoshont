@@ -40,9 +40,9 @@
       <ul class="nav navbar-nav navbar-right">
 
         <!-- start: User Dropdown -->
-        <li class="btn-group" dropdown ng-if="$root.global.isLogin">
+        <li class="btn-group" dropdown ng-if="isAuthorized">
           <a class="btn dropdown-toggle btn-navbar" dropdown-toggle>
-            <i class="halflings-icon white user"></i> {{$root.global.user.login}}
+            <i class="halflings-icon white user"></i> {{currentUser.login}}
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu" role="menu">
@@ -52,7 +52,7 @@
         </li>
 
         <!-- end: User Dropdown -->
-        <li ng-if="!$root.global.isLogin"><a ui-sref="login">登录/注册</a></li>
+        <li ng-if="!isAuthorized"><a ui-sref="auth">登录/注册</a></li>
 
       </ul>
     </div>
